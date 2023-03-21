@@ -1,13 +1,13 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIA56L24YFXAUJQ22XK"
-secret_key = "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"
+access_key = "AKIAQAC6K7IYO5ROLXVJ"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0d81306eddc614a45"
+  ami             = ""ami-0d81306eddc614a45"
   instance_type   = "t2.micro"
-  key_name        = "balajipra"
+  key_name        = "terraformmum"
   vpc_security_group_ids = [aws_security_group.three.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -26,7 +26,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-0d81306eddc614a45"
   instance_type   = "t2.medium"
-  key_name        = "balajipra"
+  key_name        = "terraformmum"
   vpc_security_group_ids = [aws_security_group.three.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
@@ -71,7 +71,7 @@ resource "aws_s3_bucket" "four" {
 }
 
 resource "aws_iam_user" "five" {
-name = "balajiterraprojectuser" 
+name = "balajiterraprojuser" 
 }
 
 resource "aws_ebs_volume" "six" {
